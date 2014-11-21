@@ -1,0 +1,14 @@
+body {
+    color: red;
+
+    p {
+        color: green;
+        transform: translateX(30px);
+        animation: 1s fade-in;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
