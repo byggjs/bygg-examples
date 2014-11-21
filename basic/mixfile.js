@@ -2,15 +2,16 @@
 'use strict';
 
 var mix = require('mix');
-var autoprefixer = require('mix/autoprefixer');
-var csswring = require('mix/csswring');
-var files = require('mix/files');
-var rev = require('mix/rev');
-var serve = require('mix/serve');
-var stats = require('mix/stats');
-var uglify = require('mix/uglify');
-var write = require('mix/write');
-var noop = require('mix/noop');
+
+var autoprefixer = require('mix-plugins/autoprefixer');
+var csswring = require('mix-plugins/csswring');
+var files = require('mix-plugins/files');
+var rev = require('mix-plugins/rev');
+var serve = require('mix-plugins/serve');
+var stats = require('mix-plugins/stats');
+var uglify = require('mix-plugins/uglify');
+var write = require('mix-plugins/write');
+var noop = require('mix-plugins/noop');
 
 mix.task('serve', function (optimize) {
     return build(optimize)

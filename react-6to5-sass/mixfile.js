@@ -3,19 +3,19 @@
 
 var mix = require('mix');
 
-var autoprefixer = require('mix/autoprefixer');
-var browserify = require('mix/browserify');
-var csswring = require('mix/csswring');
-var files = require('mix/files');
-var noop = require('mix/noop');
-var rev = require('mix/rev');
-var sass = require('mix/sass');
-var serve = require('mix/serve');
-var stats = require('mix/stats');
-var uglify = require('mix/uglify');
-var write = require('mix/write');
-var imagemin = require('mix/imagemin');
-var rename = require('mix/rename');
+var autoprefixer = require('mix-plugins/autoprefixer');
+var browserify = require('mix-plugins/browserify');
+var csswring = require('mix-plugins/csswring');
+var files = require('mix-plugins/files');
+var noop = require('mix-plugins/noop');
+var rev = require('mix-plugins/rev');
+var sass = require('mix-plugins/sass');
+var serve = require('mix-plugins/serve');
+var stats = require('mix-plugins/stats');
+var uglify = require('mix-plugins/uglify');
+var write = require('mix-plugins/write');
+var imagemin = require('mix-plugins/imagemin');
+var rename = require('mix-plugins/rename');
 
 mix.task('serve', function (optimize) {
     return build(optimize)
