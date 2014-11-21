@@ -14,6 +14,8 @@ var serve = require('mix/serve');
 var stats = require('mix/stats');
 var uglify = require('mix/uglify');
 var write = require('mix/write');
+var imagemin = require('mix/imagemin');
+var rename = require('mix/rename');
 
 mix.task('serve', function (optimize) {
     return build(optimize)
@@ -46,12 +48,17 @@ var build = function (optimize) {
                 b.transform('6to5-browserify');
             }
         }))
+        .pipe(rename('app.js', 'demo.js'))
         .pipe(optimize ? uglify() : noop());
+
+    var images = files('images/*')
+        .pipe(optimize ? imagemin() : noop());
 
     return mix.combine(
         html,
         styles,
-        scripts
+        scripts,
+        images
     )
     .pipe(optimize ? rev() : noop());
 };
