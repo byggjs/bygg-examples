@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#0.2.0",
-    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.2.0"
+    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.3.0"
   },
   "engines": {
     "node": ">= 0.10"

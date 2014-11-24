@@ -25,11 +25,13 @@ mix.task('build', function (optimize) {
 var build = function (optimize) {
     var html = mix.files('*.html');
 
-    var styles = mix.files('app.css')
+    var styles = mix
+        .files('app.css')
         .pipe(autoprefixer('last 2 versions', 'ie 9'))
         .pipe(optimize ? csswring() : mix.noop());
 
-    var scripts = mix.files('app.js')
+    var scripts = mix
+        .files('app.js')
         .pipe(optimize ? uglify() : mix.noop());
 
     return mix.combine(

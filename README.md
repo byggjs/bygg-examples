@@ -14,6 +14,8 @@ $ cd basic (or react-6to5-sass)
 $ ../node_modules/.bin/mix serve
 ```
 
+The example will be running on http://localhost:3000/
+
 There is a --optimize flag (or -o) to run with minified JS, CSS and image assets
 
 ## Building

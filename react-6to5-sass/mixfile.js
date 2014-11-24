@@ -32,12 +32,14 @@ var build = function (optimize) {
 
     var html = mix.files('*.html');
 
-    var styles = mix.files('styles/app.scss')
+    var styles = mix
+        .files('styles/app.scss')
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions', 'ie 9'))
         .pipe(optimize ? csswring() : mix.noop());
 
-    var scripts = mix.files('scripts/main.jsx')
+    var scripts = mix
+        .files('scripts/main.jsx')
         .pipe(browserify({
             dest: 'scripts/app.js',
             extensions: ['.js', '.jsx'],
@@ -48,7 +50,8 @@ var build = function (optimize) {
         .pipe(rename('app.js', 'demo.js'))
         .pipe(optimize ? uglify() : mix.noop());
 
-    var images = mix.files('images/*')
+    var images = mix
+        .files('images/*')
         .pipe(optimize ? imagemin() : mix.noop());
 
     return mix.combine(
