@@ -17,8 +17,8 @@
     "react": "^0.12.1"
   },
   "devDependencies": {
-    "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#master",
-    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#master"
+    "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#0.2.0",
+    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.2.0"
   },
   "engines": {
     "node": ">= 0.10"
