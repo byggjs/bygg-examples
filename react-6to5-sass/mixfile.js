@@ -13,6 +13,7 @@ var stats = require('mix-plugins/stats');
 var uglify = require('mix-plugins/uglify');
 var imagemin = require('mix-plugins/imagemin');
 var rename = require('mix-plugins/rename');
+var svgSprite = require('mix-plugins/svg-sprite');
 
 mix.task('serve', function (optimize) {
     return build(optimize)
@@ -50,15 +51,16 @@ var build = function (optimize) {
         .pipe(rename('app.js', 'demo.js'))
         .pipe(optimize ? uglify() : mix.noop());
 
-    var images = mix
-        .files('images/*')
-        .pipe(optimize ? imagemin() : mix.noop());
+    var sprite = mix
+        .files('images/*.svg')
+        .pipe(imagemin())
+        .pipe(svgSprite({ dest: 'images/sprite.svg' }));
 
     return mix.combine(
         html,
         styles,
         scripts,
-        images
+        sprite
     )
     .pipe(optimize ? rev() : mix.noop());
 };

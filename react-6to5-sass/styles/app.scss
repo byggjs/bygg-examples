@@ -1,14 +1,92 @@
-body {
-    color: red;
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 
-    p {
-        color: green;
-        transform: translateX(30px);
-        animation: 1s fade-in;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFF;
+    background-color: #333;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0.25em;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 2em;
+}
+
+.controller-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.controller {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
+    &.selected {
+        .icon {
+            animation: selected 3s 0s infinite linear;
+        }
+    }
+
+    &:hover {
+        .icon {
+            fill: #0F0;
+        }
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        fill: #FFF;
+        transition: fill 1s linear;
     }
 }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes selected {
+    0%   {fill: #FF0000;}
+    10%  {fill: #FF8000;}
+    20%  {fill: #FFFF00;}
+    30%  {fill: #80FF00;}
+    40%  {fill: #00FF00;}
+    50%  {fill: #00FF80;}
+    60%  {fill: #00FFFF;}
+    70%  {fill: #0080FF;}
+    80%  {fill: #0000FF;}
+    90%  {fill: #8000FF;}
+    100% {fill: #FF0080;}
 }
