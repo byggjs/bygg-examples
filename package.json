@@ -13,12 +13,12 @@
     "url": "https://bitbucket.org/soundrop/mix-examples.git"
   },
   "dependencies": {
-    "6to5-browserify": "^1.3.0",
+    "6to5ify": "^3.1.0",
     "react": "^0.12.1"
   },
   "devDependencies": {
-    "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#0.2.0",
-    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.3.2"
+    "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#0.3.0",
+    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.4.0"
   },
   "engines": {
     "node": ">= 0.10"
