@@ -1,9 +1,9 @@
-# mix examples
+# bygg examples
 
 ## Requirements
 
 ```bash
-$ git clone https://bitbucket.org/soundrop/mix-examples.git
+$ git clone https://github.com/oleavr/bygg-examples.git
 $ npm install
 ```
 
@@ -11,7 +11,7 @@ $ npm install
 
 ```bash
 $ cd basic (or react-6to5-sass)
-$ ../node_modules/.bin/mix serve
+$ ../node_modules/.bin/bygg serve
 ```
 
 The example will be running on http://localhost:3000/
@@ -22,6 +22,6 @@ There is a --optimize flag (or -o) to run with minified JS, CSS and image assets
 
 ```bash
 $ cd basic (or react-6to5-sass)
-$ ../node_modules/.bin/mix build
+$ ../node_modules/.bin/bygg build
 ```
 

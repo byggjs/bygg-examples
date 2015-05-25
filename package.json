@@ -1,24 +1,23 @@
 {
-  "name": "mix-example",
-  "description": "Project example using mix",
-  "version": "0.1.0",
+  "name": "bygg-examples",
+  "description": "Project example using bygg",
+  "version": "1.0.0",
   "author": {
     "name": "Sylvain Gizard",
     "email": "sylvain.gizard@soundrop.com",
     "url": "http://www.soundrop.fm/"
   },
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/soundrop/mix-examples.git"
+    "url": "git://github.com/oleavr/bygg-examples.git"
   },
   "dependencies": {
     "6to5ify": "^3.1.0",
     "react": "^0.12.1"
   },
   "devDependencies": {
-    "mix": "git+ssh://git@bitbucket.org:soundrop/mix.git#0.3.0",
-    "mix-plugins": "git+ssh://git@bitbucket.org:soundrop/mix-plugins.git#0.4.0"
+    "bygg": "^1.0.0",
+    "bygg-plugins": "^1.0.0"
   },
   "engines": {
     "node": ">= 0.10"
