@@ -4,6 +4,7 @@
 
 ```bash
 $ git clone https://github.com/oleavr/bygg-examples.git
+$ cd bygg-examples
 $ npm install
 ```
 
