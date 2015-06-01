@@ -42,13 +42,12 @@ var build = function (optimize) {
     var scripts = bygg
         .files('scripts/main.jsx')
         .pipe(browserify({
-            dest: 'scripts/app.js',
             extensions: ['.js', '.jsx'],
             configure: function (b) {
                 b.transform('babelify');
             }
         }))
-        .pipe(rename('app.js', 'demo.js'))
+        .pipe(rename('main.js', 'demo.js'))
         .pipe(optimize ? uglify() : bygg.noop());
 
     var sprite = bygg
