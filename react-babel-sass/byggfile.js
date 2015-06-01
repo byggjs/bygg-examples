@@ -45,7 +45,7 @@ var build = function (optimize) {
             dest: 'scripts/app.js',
             extensions: ['.js', '.jsx'],
             configure: function (b) {
-                b.transform('6to5ify');
+                b.transform('babelify');
             }
         }))
         .pipe(rename('app.js', 'demo.js'))

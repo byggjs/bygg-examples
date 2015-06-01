@@ -11,13 +11,11 @@
     "type": "git",
     "url": "git://github.com/oleavr/bygg-examples.git"
   },
-  "dependencies": {
-    "6to5ify": "^3.1.0",
-    "react": "^0.12.1"
-  },
   "devDependencies": {
+    "babelify": "^6.1.2",
     "bygg": "^1.0.0",
-    "bygg-plugins": "^1.0.0"
+    "bygg-plugins": "^1.0.0",
+    "react": "^0.13.0"
   },
   "engines": {
     "node": ">= 0.10"

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Icon from './icon';
 
-let App = React.createClass({
+class App extends React.Component {
     render(){
         return (
             <main>
@@ -11,12 +11,13 @@ let App = React.createClass({
             </main>
         );
     }
-});
+}
 
-let ControllerList = React.createClass({
-    getInitialState() {
-        return { selected: null };
-    },
+class ControllerList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { selected: null };
+    }
     render(){
         return (
             <ul className='controller-list'>
@@ -27,13 +28,13 @@ let ControllerList = React.createClass({
                 )}
             </ul>
         );
-    },
+    }
     onControllerClick(type, event) {
         this.setState({ selected: type !== this.state.selected ? type : null });
     }
-});
+}
 
-let Controller = React.createClass({
+class Controller extends React.Component {
     render(){
         return (
             <li className={`controller ${ this.props.selected ? 'selected' : '' }`}
@@ -42,6 +43,6 @@ let Controller = React.createClass({
             </li>
         );
     }
-});
+}
 
 export default App;

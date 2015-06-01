@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-let Icon = React.createClass({
+class Icon extends React.Component {
     render(){
         return (
             <svg className='icon' dangerouslySetInnerHTML={{
@@ -8,6 +8,6 @@ let Icon = React.createClass({
             }} />
         );
     }
-});
+}
 
 export default Icon;
