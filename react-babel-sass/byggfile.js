@@ -44,7 +44,11 @@ var build = function (optimize) {
         .pipe(browserify({
             extensions: ['.js', '.jsx'],
             configure: function (b) {
-                b.transform('babelify');
+                b.transform(
+                    require('babelify').configure({
+                        optional: ['es7.classProperties']
+                    })
+                );
             }
         }))
         .pipe(rename('main.js', 'demo.js'))

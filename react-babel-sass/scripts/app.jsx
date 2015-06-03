@@ -14,10 +14,7 @@ class App extends React.Component {
 }
 
 class ControllerList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { selected: null };
-    }
+    state = { selected: null };
     render(){
         return (
             <ul className='controller-list'>
