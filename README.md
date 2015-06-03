@@ -3,7 +3,7 @@
 ## Requirements
 
 ```bash
-$ git clone https://github.com/oleavr/bygg-examples.git
+$ git clone https://github.com/byggjs/bygg-examples.git
 $ cd bygg-examples
 $ npm install
 ```
@@ -11,7 +11,7 @@ $ npm install
 ## Running
 
 ```bash
-$ cd basic (or react-6to5-sass)
+$ cd basic (or react-babel-sass)
 $ ../node_modules/.bin/bygg serve
 ```
 
@@ -22,7 +22,7 @@ There is a --optimize flag (or -o) to run with minified JS, CSS and image assets
 ## Building
 
 ```bash
-$ cd basic (or react-6to5-sass)
+$ cd basic (or react-babel-sass)
 $ ../node_modules/.bin/bygg build
 ```
 
