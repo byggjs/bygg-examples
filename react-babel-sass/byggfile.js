@@ -19,13 +19,13 @@ bygg.task('serve', function (optimize) {
     return build(optimize)
         .pipe(bygg.write('build/'))
         .pipe(serve(3000));
-}, [{ name: 'optimize', default: false, flag: true, abbr: 'o' }]);
+});
 
 bygg.task('build', function (optimize) {
     return build(optimize)
         .pipe(bygg.write('build/'))
         .pipe(stats());
-}, [{ name: 'optimize', default: true, flag: true, abbr: 'o' }]);
+});
 
 var build = function (optimize) {
     // Useful for React minification
