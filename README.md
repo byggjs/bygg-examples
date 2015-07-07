@@ -11,8 +11,7 @@ $ npm install
 ## Running
 
 ```bash
-$ cd basic (or react-babel-sass)
-$ ../node_modules/.bin/bygg serve
+$ ./node_modules/.bin/bygg serve --cwd basic #or react-babel-sass
 ```
 
 The example will be running on http://localhost:3000/
