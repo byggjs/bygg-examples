@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './app';
 
 const controllers = ['nes', 'snes', 'wii', 'ps3', 'x360'];
 
-React.render(
+ReactDOM.render(
     <App data={controllers} />,
     document.getElementById('app')
 );

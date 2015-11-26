@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Icon from './icon';
 
 class App extends React.Component {
@@ -14,6 +14,10 @@ class App extends React.Component {
 }
 
 class ControllerList extends React.Component {
+    constructor(){
+        super()
+    }
+    
     state = { selected: null };
     render(){
         return (

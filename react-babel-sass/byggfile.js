@@ -46,7 +46,7 @@ var build = function (optimize) {
             configure: function (b) {
                 b.transform(
                     require('babelify').configure({
-                        optional: ['es7.classProperties']
+                        presets: ["es2015", "stage-0", "react"]
                     })
                 );
             }

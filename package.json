@@ -12,10 +12,14 @@
     "url": "git://github.com/oleavr/bygg-examples.git"
   },
   "devDependencies": {
-    "babelify": "^6.1.2",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babelify": "^7.2.0",
     "bygg": "^1.1.0",
     "bygg-plugins": "^1.1.0",
-    "react": "^0.13.0"
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "engines": {
     "node": ">= 0.10"
